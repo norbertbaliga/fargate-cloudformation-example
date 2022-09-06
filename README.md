@@ -2,7 +2,7 @@
 
 An example CloudFormation template that deploys a container to AWS Fargate as a service.
 
-Multiple AZs are used for high availability, SSL is terminated at the load balancer, health checks are used, a DNS record is created, and it scales to keep CPU utilization at or below 50%. Specifically, it includes:
+Multiple AZs are used for high availability, HTTP lsitener on a load balancer, health checks are used, and it scales to keep CPU utilization at or below 50%. Specifically, it includes:
 
 * A cluster
 * A task definition for the container
@@ -11,5 +11,4 @@ Multiple AZs are used for high availability, SSL is terminated at the load balan
 * The necessary IAM roles
 * Logging to CloudWatch Logs, including the creation of a log group
 * Security groups for the container and load balancer
-* A DNS record for Route 53
 * An auto scaling policy
